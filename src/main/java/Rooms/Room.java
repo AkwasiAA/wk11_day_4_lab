@@ -35,5 +35,9 @@ public abstract class Room {
         return this.guests.size();
     }
 
+    public void removeGuest(Guest guest){
+        this.guests.remove(guest);
+    }
+
 
 }

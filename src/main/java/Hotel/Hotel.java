@@ -20,7 +20,9 @@ public class Hotel {
        bedroom.addGuest(guest);
     }
 
-//    public void checkOutGuest()
+    public void checkOutGuest(Bedroom bedroom, Guest guest){
+        bedroom.removeGuest(guest);
+    }
 
 
 }
