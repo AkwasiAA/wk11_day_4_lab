@@ -26,4 +26,14 @@ public abstract class Room {
     public int getCapacity() {
         return roomType.getCapacity();
     }
+
+    public void addGuest(Guest guest){
+        this.guests.add(guest);
+    }
+
+    public int getNumberOfGuestsInRoom(){
+        return this.guests.size();
+    }
+
+
 }

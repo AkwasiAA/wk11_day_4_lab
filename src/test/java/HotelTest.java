@@ -1,0 +1,37 @@
+import Guests.Guest;
+import Hotel.Hotel;
+import Rooms.Bedroom;
+import Rooms.RoomType;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+public class HotelTest {
+
+    Hotel hotel;
+    Guest guest;
+    Bedroom bedroom;
+
+
+
+    @Before
+    public void before(){
+        hotel = new Hotel();
+        guest = new Guest(" Jakub Pfizer");
+        bedroom = new Bedroom(RoomType.TRIPLE, 3, 103);
+    }
+
+    @Test
+    public void canCheckInGuests(){
+        hotel.checkInGuest(bedroom, guest);
+        assertEquals(1, bedroom.getNumberOfGuestsInRoom());
+    }
+
+//    @Test
+//    public void canCheckInGuests(){
+//        bedroom.addGuest(guest);
+//        assertEquals(1, hotel.checkInGuest());
+//    }
+
+}

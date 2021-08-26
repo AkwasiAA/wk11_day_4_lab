@@ -12,4 +12,6 @@ public class Bedroom extends Room {
     public int getRoomNumber() {
         return roomNumber;
     }
+
+
 }
