@@ -1,5 +1,6 @@
 import Guests.Guest;
 import Hotel.Hotel;
+import Hotel.Booking;
 import Rooms.Bedroom;
 import Rooms.RoomType;
 import org.junit.Before;
@@ -12,6 +13,7 @@ public class HotelTest {
     Hotel hotel;
     Guest guest;
     Bedroom bedroom;
+    Booking booking;
 
 
 
@@ -33,6 +35,12 @@ public class HotelTest {
         hotel.checkInGuest(bedroom, guest);
         hotel.checkOutGuest(bedroom, guest);
         assertEquals(0, bedroom.getNumberOfGuestsInRoom());
+    }
+
+    @Test
+    public void canMakeNewBooking(){
+        hotel.bookRoom(bedroom, 5);
+        assertEquals(1, hotel.guestHasBooking());
     }
 
 }
